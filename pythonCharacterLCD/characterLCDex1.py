@@ -31,8 +31,8 @@ def main():
 	lcd_init()
 	
 	while True:
-		lcd_string("Rasbperry Pi", LCD_LINE1)
-		lcd_string("16x2 LCD Test", LCD_LINE2)
+		lcd_string("Rasbperry Pi", LCD_LINE_1)
+		lcd_string("16x2 LCD Test", LCD_LINE_2)
 		time.sleep(3)
 		
 		lcd_string("1234567890123456", LCD_LINE_1)
@@ -89,10 +89,10 @@ def lcd_toggle_enable():
 	time.sleep(E_DELAY)
 
 def lcd_string(message, line):
-	message = message.ljust(LCD_WIDTH,"")
+	message = message.ljust(LCD_WIDTH," ")
 	lcd_byte(line, LCD_CMD)
 	for i in range(LCD_WIDTH):
-		lcd_byte(ord(message[i], LCD_CHR)
+		lcd_byte(ord(message[i]), LCD_CHR)
 
 if __name__ == '__main__':
 	try:
