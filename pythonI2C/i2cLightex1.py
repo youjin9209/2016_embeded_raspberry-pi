@@ -9,7 +9,7 @@ con_hr_mode = 0x10
 data1 = 0
 data2 = 0
 val = 0
-light_val = 0
+light_val = 0x10
 
 try:
 	bus.write_byte(addr, reset)
