@@ -43,7 +43,7 @@ try:
         humi = -6.0+125.0/65536*val;
 	
 	# if temperature is higher than 32	
-	if(temp > 31):
+	if(temp > 23.5):
             p.start(100)
             p.ChangeDutyCycle(90)
             p.ChangeFrequency(329)
